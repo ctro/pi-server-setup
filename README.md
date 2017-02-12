@@ -9,14 +9,17 @@
 0. Run `sudo rasbi-config` and enable "SSH" under "Advanced Options".
 0. Boot with ethernet only. Find the IP of your raspberry pi on your router's admin page.
 
+## Add pi-server host
+`echo "192.168.0.4 pi-server" | sudo tee -a /etc/hosts`
+
 ## Add your public key to the server
-```
-cat ~/.ssh/id_rsa.pub | ssh pi@192.168.0.4 'mkdir ~/.ssh && cat >> ~/.ssh/authorized_keys'
-```
+`cat ~/.ssh/id_rsa.pub | ssh pi@pi-server 'mkdir ~/.ssh && cat >> ~/.ssh/authorized_keys'`
 
 ## Run remote scripts
-```
-ssh pi@192.168.0.4 "bash -s" < ./update.bash
-ssh pi@192.168.0.4 "bash -s" < ./firewall.bash
-ssh pi@192.168.0.4 "bash -s" < ./tools.bash
-```
+`bash setup.bash`
+
+## Deploy a site
+`bash deploy.bash`
+
+## Look at it
+`open http://pi-server`
