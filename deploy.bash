@@ -6,3 +6,4 @@ scp -r ./html pi@pi-server:/home/pi
 # delete old site and move new one
 ssh pi@pi-server "sudo rm -rf /var/www/html"
 ssh pi@pi-server "sudo mv /home/pi/html /var/www"
+ssh pi@pi-server "chmod -R 755 /var/www/html"
