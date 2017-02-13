@@ -1,5 +1,12 @@
 # Raspberry Pi Server Setup
 
+## TODO:
+- [ ] Let's Encrypt
+- [ ] Cloud Flare
+- [ ] Logging
+- [ ] Static IP
+- [ ] Battery Power
+
 ## Pre
 
 0. [Download Raspian Lite](https://www.raspberrypi.org/downloads/raspbian/)
