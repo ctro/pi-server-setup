@@ -23,7 +23,7 @@ I have a single static IP on my gateway/router. In router admin page:
 - Port Forwarding lets you forward 80, 443, and 22 on to the pi.
 This means only 1 server, but that's ok for now, the setup is way simpler this way.
 
-
+You may also have to adjust IPV4 Firewall settings on your router. This is in addition to the OS-level firewall in `firewall.bash`
 ## Add pi-server host
 `echo "192.168.0.3 pi-server" | sudo tee -a /etc/hosts`
 
