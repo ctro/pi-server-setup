@@ -4,7 +4,7 @@
 - [ ] Let's Encrypt
 - [ ] Cloud Flare
 - [ ] Logging
-- [ ] Static IP
+- [X] Static IP
 - [ ] Battery Power
 
 ## Pre
