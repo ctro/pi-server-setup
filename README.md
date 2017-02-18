@@ -3,7 +3,7 @@
 ## TODO:
 - [ ] Let's Encrypt
 - [ ] Cloud Flare
-- [ ] Logging
+- [X] Logging
 - [X] Static IP
 - [ ] Battery Power
 
@@ -27,11 +27,20 @@ You may also have to adjust IPV4 Firewall settings on your router. This is in ad
 ## Add pi-server host
 `echo "192.168.0.3 pi-server" | sudo tee -a /etc/hosts`
 
+## Disable remote root ssh login
+`sudo vim /etc/ssh/sshd_config`
+Set `PermitRootLogin` to `no`.
+Add `AllowUsers pi`
+
 ## Add your public key to the server
 `cat ~/.ssh/id_rsa.pub | ssh pi@pi-server 'mkdir ~/.ssh && cat >> ~/.ssh/authorized_keys'`
 
 ## Run remote scripts
 `bash setup.bash`
+
+## Some scripts don't run automatically
+- monitor.bash
+- https.bash
 
 ## Deploy a site
 `bash deploy.bash`

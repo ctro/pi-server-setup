@@ -1,0 +1,57 @@
+html {
+  background-color: #544E6E;
+  margin: 0 17%;
+  color: #eee;
+  font-size: 142%
+}
+
+h2 {
+  font-family: 'Dancing Script', cursive;
+  margin-top: 7%;
+  border-bottom: dotted 2px;
+  color: #FEFEC3
+}
+
+a {
+  color: white;
+}
+
+.hide-text {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  height: 0;
+}
+
+#about img {
+  float: left;
+  height: 350px;
+  width: auto;
+  margin: 20px;
+}
+
+#rates img {
+  float: right;
+  height: 250px;
+  width: auto;
+  margin: 20px;
+}
+
+div#rates {
+  min-height: 300px;
+}
+
+#rates table td {
+  border: dotted 1px white;
+  margin: 20px;
+  padding: 10px;
+}
+
+#reviews li {
+  margin: 15px 0 20px 0;
+}
+
+#footer {
+  text-align: center;
+  margin-top: 11%;
+}
