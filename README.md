@@ -28,9 +28,18 @@ You may also have to adjust IPV4 Firewall settings on your router. This is in ad
 `echo "192.168.0.3 pi-server" | sudo tee -a /etc/hosts`
 
 ## Disable remote root ssh login
-`sudo vim /etc/ssh/sshd_config`
-Set `PermitRootLogin` to `no`.
-Add `AllowUsers pi`
+`sudo vim /etc/ssh/sshd_config` and make this happen:
+
+```
+# Authentication:
+LoginGraceTime 120
+PermitRootLogin no
+PasswordAuthentication no
+ChallengeResponseAuthentication no
+UsePAM no
+AllowUsers pi
+StrictModes yes
+```
 
 ## Add your public key to the server
 `cat ~/.ssh/id_rsa.pub | ssh pi@pi-server 'mkdir ~/.ssh && cat >> ~/.ssh/authorized_keys'`
