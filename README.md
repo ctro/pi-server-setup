@@ -1,8 +1,8 @@
 # Raspberry Pi Server Setup
 
 ## TODO:
-- [ ] Let's Encrypt
-- [ ] Cloud Flare
+- [ ] Let's Encrypt (?)
+- [X] Cloud Flare
 - [X] Logging
 - [X] Static IP
 - [ ] Battery Power
