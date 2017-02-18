@@ -25,15 +25,15 @@ a {
 
 #about img {
   float: left;
-  height: 350px;
-  width: auto;
+  height: auto;
+  width: 70%;
   margin: 20px;
 }
 
 #rates img {
   float: right;
-  height: 250px;
-  width: auto;
+  height: auto;
+  width: 30%;
   margin: 20px;
 }
 
