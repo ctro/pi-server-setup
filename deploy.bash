@@ -1,9 +1,9 @@
 #!/bin/bash -eux
 
-# Move html directory onto server
-scp -r ./html pi@pi-server:/home/pi
+# Move some html directory onto server
+scp -r ../3peaks pi@pi-public:/home/pi/htl
 
 # delete old site and move new one
-ssh pi@pi-server "sudo rm -rf /var/www/html"
-ssh pi@pi-server "sudo mv /home/pi/html /var/www"
-ssh pi@pi-server "chmod -R 755 /var/www/html"
+ssh pi@pi-public "sudo rm -rf /var/www/html"
+ssh pi@pi-public "sudo mv /home/pi/html /var/www"
+ssh pi@pi-public "chmod -R 755 /var/www/html"
