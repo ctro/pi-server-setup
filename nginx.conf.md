@@ -31,7 +31,7 @@ server {
         listen 80;
         listen [::]:80;
 
-        root /var/www/3peaks/html;
+        root /var/www/3peaks;
         index index.html;
 
         server_name 3peaksmassage.com www.3peaksmassage.com threepeaksmassage.com www.threepeaksmassage.com;
@@ -49,7 +49,7 @@ server {
         listen 80;
         listen [::]:80 default_server;
 
-        root /var/www/sustainable/html;
+        root /var/www/sustainable;
         index index.html;
 
         server_name sustainableserver.com www.sustainableserver.com;
