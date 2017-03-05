@@ -1,9 +1,15 @@
 #!/bin/bash -eux
 
-# Move some html directory onto server
-scp -r ../3peaks pi@pi-public:/home/pi/htl
+# 3peaks
+ssh pi@pi-server "mkdir -p /home/pi/3peaks"
+scp -r ../3peaks pi@pi-server:/home/pi/3peaks/html
+ssh pi@pi-server "sudo rm -rf /var/www/3peaks"
+ssh pi@pi-server "sudo mv /home/pi/3peaks /var/www/3peaks"
+ssh pi@pi-server "chmod -R 755 /var/www/3peaks"
 
-# delete old site and move new one
-ssh pi@pi-public "sudo rm -rf /var/www/html"
-ssh pi@pi-public "sudo mv /home/pi/html /var/www"
-ssh pi@pi-public "chmod -R 755 /var/www/html"
+# sustainable
+ssh pi@pi-server "mkdir -p /home/pi/sustainable"
+scp -r ../sustainable pi@pi-server:/home/pi/sustainable/html
+ssh pi@pi-server "sudo rm -rf /var/www/sustainable"
+ssh pi@pi-server "sudo mv /home/pi/sustainable /var/www/sustainable"
+ssh pi@pi-server "chmod -R 755 /var/www/sustainable"
